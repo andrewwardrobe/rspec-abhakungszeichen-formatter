@@ -1,7 +1,7 @@
 module Rspec
-  module Abhakungszeichen
+  module Tick
     module Formatter
-      VERSION = "0.0.2"
+      VERSION = "0.1.1"
     end
   end
 end

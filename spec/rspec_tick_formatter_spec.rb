@@ -1,28 +1,27 @@
 $:.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
-require "rspec-abhakungszeichen-formatter"
+require "rspec-tick-formatter"
 
 # Just to demonstrate its output
 
-describe RspecAbhakungszeichenFormatter do
+describe RspecTickFormatter do
   context "test spec" do
 
     context "context 1" do
       it "works" do
-        1.should == 1
+        expect(1).to eq 1
       end
 
-      pending "is pending" do
-      end
+      pending "is pending"
     end
 
     context "context 2" do
       it "works too" do
-        1.should ==1
+        expect(1).to  eq 1
       end
 
       it "fails" do
-        1.should == 42
+        expect(1).to eq 42
       end
     end
   end

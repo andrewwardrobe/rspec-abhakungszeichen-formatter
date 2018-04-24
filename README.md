@@ -1,22 +1,24 @@
-# Rspec::Abhakungszeichen::Formatter
+# Rspec::Tick::Formatter
 
-Rspec2 formatter that pleases developers eyes
+Rspec3 port of rspec-abhakungszeichen-formatter that pleases developers eyes
+
+Forked from the orignal Rspec::Abhakungszeichen::Formatter
 
 ![demo](abhakungszeichen-demo.png)
 
-## Why Abhakungszeichen?
+## Why Rename?
 
-Because it's the funniest translation for 'tick' I've found so far.
+Because I can't pronounce Abhakungszeichen
 
 ## Installation
 
 install formatter:
 
-    $ gem install rspec-abhakungszeichen-formatter
+    $ gem install rspec-tick-formatter
 
 ## Usage
 
-    $ rspec --format RspecAbhakungszeichenFormatter --color my_spec.rb
+    $ rspec --format RspecTickFormatter --color my_spec.rb
 
 ## Contributing
 
