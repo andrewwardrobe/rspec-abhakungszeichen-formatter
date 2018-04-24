@@ -2,7 +2,8 @@
 
 Rspec3 port of rspec-abhakungszeichen-formatter that pleases developers eyes
 
-Forked from the orignal Rspec::Abhakungszeichen::Formatter
+Forked from the orignal Rspec::Abhakungszeichen::Formatter:
+https://github.com/invadersmustdie/rspec-abhakungszeichen-formatter
 
 ![demo](abhakungszeichen-demo.png)
 
