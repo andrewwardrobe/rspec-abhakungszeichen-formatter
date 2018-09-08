@@ -11,19 +11,19 @@ class RspecTickFormatter < RSpec::Core::Formatters::BaseTextFormatter
                                    :example_failed
 
   def example_passed(proxy)
-    puts color("#{pad} \u2713 #{proxy.example.description}", :green)
+    output.puts color("#{pad} \u2713 #{proxy.example.description}", :green)
   end
 
   def example_pending(proxy)
-    puts color("#{pad} \u2729 #{proxy.example.description}", :yellow)
+    output.puts color("#{pad} \u2729 #{proxy.example.description}", :yellow)
   end
 
   def example_failed(proxy)
-    puts color("#{pad} \u2717 #{proxy.example.description}: #{proxy.example.exception}", :red)
+    output.puts color("#{pad} \u2717 #{proxy.example.description}: #{proxy.example.exception}", :red)
   end
 
   def example_started(example_group)
-    puts "#{pad} #{example_group.example.description}:"
+    output.puts "#{pad} #{example_group.example.description}:"
     @level += 1
   end
 
