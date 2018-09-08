@@ -7,8 +7,8 @@ class RspecTickFormatter < RSpec::Core::Formatters::BaseTextFormatter
     @level = 0
   end
 
-  RSpec::Core::Formatters.register self, :example_started, :example_passed, :example_pending,
-                                   :example_failed
+  RSpec::Core::Formatters.register self, :example_group_started, :example_passed, :example_pending,
+                                   :example_failed, :example_group_finished
 
   def example_passed(proxy)
     output.puts color("#{pad} \u2713 #{proxy.example.description}", :green)
@@ -22,12 +22,12 @@ class RspecTickFormatter < RSpec::Core::Formatters::BaseTextFormatter
     output.puts color("#{pad} \u2717 #{proxy.example.description}: #{proxy.example.exception}", :red)
   end
 
-  def example_started(example_group)
+  def example_group_started(example_group)
     output.puts "#{pad} #{example_group.example.description}:"
     @level += 1
   end
 
-  def example_finished(example_group)
+  def example_group_finished(example_group)
     @level -= 1
   end
 
