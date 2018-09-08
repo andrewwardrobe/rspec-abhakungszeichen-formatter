@@ -23,7 +23,7 @@ class RspecTickFormatter < RSpec::Core::Formatters::BaseTextFormatter
   end
 
   def example_group_started(example_group)
-    output.puts "#{pad} #{example_group.example.description}:"
+    output.puts "#{pad} #{example_group.group.description}:"
     @level += 1
   end
 
